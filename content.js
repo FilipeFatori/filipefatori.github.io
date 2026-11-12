@@ -47,16 +47,16 @@ window.SITE = {
   works: [
 
     {
-      id: "marca-01",
+      id: "motorola-swarovski-moto-buds-loop",
       category: "trilha",
-      brand: "Marca 01",
-      title: "Título da campanha",
+      brand: "Motorola x Swarovski",
+      title: "Moto Buds Loop",
       year: "2025",
-      role: "Composição e produção",
-      format: "Filme 30\"",
-      note: "Uma linha sobre a decisão criativa da trilha.",
-      video: "",     // ex.: "https://www.youtube.com/watch?v=XXXXXXXXXXX"
-      thumb: "",     // ex.: "img/marca-01.jpg"
+      role: "Trilha sonora",
+      format: "",
+      note: "",
+      video: "https://vimeo.com/1246056190",   // link do YouTube ou Vimeo
+      thumb: "",     // ex.: "img/moto-buds-loop.jpg"
       preview: ""
     },
     {
