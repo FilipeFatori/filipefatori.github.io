@@ -15,8 +15,8 @@ window.SITE = {
   showVoiceOver: false,
 
   // Ícones no canto direito (deixe "" para esconder um deles)
-  instagram: "https://instagram.com/SEU_USUARIO",   // TODO: troque pelo seu
-  email: "seu@email.com",                           // TODO: troque pelo seu
+  instagram: "https://instagram.com/filipefatori",   // TODO: troque pelo seu
+  email: "",                           // TODO: troque pelo seu
 
   // DESTAQUES (opcional): até 2 trabalhos grandes no topo da página inicial.
   // Está DESLIGADO (lista vazia). Para ligar, coloque os "id" de 2 trabalhos,
