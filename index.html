@@ -193,6 +193,25 @@
     return y ? ['https://i.ytimg.com/vi/' + y + '/maxresdefault.jpg', 'https://i.ytimg.com/vi/' + y + '/hqdefault.jpg'] : [];
   }
 
+  /* ---------- capa automática do Vimeo ---------- */
+  var vimeoCache = {};
+  function vimeoThumb(u) {
+    var s = String(u || '');
+    var i = s.indexOf('vimeo.com/');
+    if (i < 0) return Promise.resolve(null);
+    var parts = s.slice(i + 10).split(/[?#]/)[0].split('/').filter(Boolean);
+    if (parts[0] === 'video') parts.shift();
+    if (!parts[0] || isNaN(parts[0])) return Promise.resolve(null);
+    var url = 'https://vimeo.com/' + parts[0] + (parts[1] ? '/' + parts[1] : '');
+    if (!vimeoCache[url]) {
+      vimeoCache[url] = fetch('https://vimeo.com/api/oembed.json?width=1280&url=' + encodeURIComponent(url))
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (j) { return j && j.thumbnail_url ? j.thumbnail_url : null; })
+        .catch(function () { return null; });
+    }
+    return vimeoCache[url];
+  }
+
   /* ---------- miniatura ---------- */
   function thumb(w) {
     var box = h('div', { class: 'thumb', style: '--h:' + hue(w.id || w.title) });
@@ -205,6 +224,15 @@
       img.onload = function () { if (img.naturalWidth && img.naturalWidth < 200) img.onerror(); };
       img.src = srcs[0];
       box.appendChild(img);
+    }
+    if (!srcs.length) {
+      vimeoThumb(w.video).then(function (u) {
+        if (!u) return;
+        var im = h('img', { alt: '', loading: 'lazy', decoding: 'async' });
+        im.onerror = function () { im.remove(); };
+        im.src = u;
+        box.insertBefore(im, box.querySelector('.play'));
+      });
     }
     if (w.preview && canHover) {
       var pv = h('video', { muted: '', loop: '', playsinline: '', preload: 'none', 'aria-hidden': 'true' });
@@ -247,7 +275,7 @@
       media.appendChild(h('div', { class: 'soon', text: 'Vídeo em breve' }));
     }
     var dl = h('dl');
-    row(dl, 'Ano', w.year); row(dl, 'Meu papel', w.role); row(dl, 'Formato', w.format);
+    row(dl, 'Ano', w.year); row(dl, 'Crédito', w.role); row(dl, 'Formato', w.format);
     body.appendChild(media);
     body.appendChild(h('div', { class: 'info' },
       h('h2', { text: [w.brand, w.title].filter(Boolean).join(' — ') }),
