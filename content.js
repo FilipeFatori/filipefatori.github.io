@@ -52,7 +52,7 @@ window.SITE = {
       brand: "Motorola x Swarovski",
       title: "Moto Buds Loop",
       year: "2025",
-      role: "Trilha sonora",
+      role: "Trilha Sonora: Filipe Fatori",
       format: "",
       note: "",
       video: "https://vimeo.com/1246056190",   // link do YouTube ou Vimeo
