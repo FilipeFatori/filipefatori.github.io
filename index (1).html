@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filipe Fatori — Trilha e Sound Design</title>
+<meta name="description" content="Portfólio de Filipe Fatori: trilha sonora e sound design para publicidade e vídeo.">
+<!-- Para o site NÃO aparecer no Google, apague as setas desta linha: -->
+<!-- <meta name="robots" content="noindex, nofollow"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  /* aplica o tema salvo antes de desenhar a página (evita piscar) */
+  try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+<style>
+  *{box-sizing:border-box;margin:0}
+  :root{--max:1480px;--pad:clamp(20px,4vw,56px);--ease:cubic-bezier(.2,.7,.2,1)}
+  :root[data-theme=dark]{color-scheme:dark;--bg:#0d0d0e;--fg:#ececec;--muted:#8d8d93;--line:#232326;--card:#161618;--ph1:20%;--ph2:11%}
+  :root[data-theme=light]{color-scheme:light;--bg:#fbfbfa;--fg:#111113;--muted:#6c6c72;--line:#e5e5e2;--card:#efefec;--ph1:86%;--ph2:78%}
+
+  body{background:var(--bg);color:var(--fg);font:400 15px/1.5 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+       -webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;transition:background .25s,color .25s}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+  :focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad);width:100%}
+
+  /* ---------- cabeçalho ---------- */
+  header .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:92px}
+  .nav{display:flex;gap:28px}
+  .nav a{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:6px 0;
+         border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+  .nav a:hover,.nav a[aria-current=page]{color:var(--fg)}
+  .nav a[aria-current=page]{border-color:var(--fg)}
+  .brand{font-size:14px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;text-align:center;white-space:nowrap}
+  .tools{display:flex;justify-content:flex-end;align-items:center;gap:4px}
+  .icon-btn{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;color:var(--muted);transition:color .2s,background .2s}
+  .icon-btn:hover{color:var(--fg);background:var(--card)}
+  .icon-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+  main{flex:1;padding-bottom:88px}
+  .label{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:18px 0 14px}
+
+  /* ---------- destaques ---------- */
+  .featured{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .featured .cap strong{font-size:17px}
+  .featured .cap span{font-size:15px}
+
+  /* ---------- abas ---------- */
+  .tabs{display:flex;gap:28px;margin:60px 0 28px;border-bottom:1px solid var(--line)}
+  .tabs:first-child{margin-top:34px}
+  .tabs a{padding:0 0 14px;margin-bottom:-1px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+          border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+  .tabs a:hover,.tabs a[aria-current=page]{color:var(--fg)}
+  .tabs a[aria-current=page]{border-color:var(--fg)}
+
+  /* ---------- grade e cartões ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:32px 20px}
+  .empty{color:var(--muted);padding:40px 0}
+  .card{display:block;width:100%;text-align:left}
+  .thumb{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:3px;
+         background:linear-gradient(135deg,hsl(var(--h) 14% var(--ph1)),hsl(calc(var(--h) + 40) 16% var(--ph2)))}
+  .thumb img,.thumb video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+  .ph-label{position:absolute;inset:0;display:grid;place-items:center;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .play{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.3);opacity:0;transition:opacity .25s}
+  .play i{width:60px;height:60px;border-radius:50%;border:1.5px solid #fff;display:grid;place-items:center}
+  .play svg{width:20px;height:20px;fill:#fff;margin-left:3px}
+  .card:focus-visible .play{opacity:1}
+  @media (hover:hover){
+    .card:hover .play{opacity:1}
+    .card:hover .thumb img{transform:scale(1.03)}
+  }
+  .cap{display:grid;gap:2px;margin-top:13px}
+  .cap strong{font-size:14.5px;font-weight:600}
+  .cap span{font-size:14px;color:var(--muted)}
+  .cap em{font-style:normal;font-size:12.5px;color:var(--muted);opacity:.85}
+
+  /* ---------- voice over ---------- */
+  .voice{max-width:900px;margin:56px auto 0}
+  .voice h1{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500}
+  .voice .intro{margin:10px 0 40px;font-size:20px;line-height:1.4;max-width:34em}
+  .v-group{margin-top:34px}
+  .v-row{display:grid;grid-template-columns:1fr minmax(240px,430px);gap:16px 24px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+  .v-row:first-of-type{border-top:1px solid var(--line)}
+  .v-row audio{width:100%;height:40px}
+  .v-row .soon{font-size:13px;color:var(--muted)}
+
+  /* ---------- player ---------- */
+  dialog{border:0;padding:0;background:var(--bg);color:var(--fg);width:min(1100px,94vw);max-height:94vh;overflow:auto;border-radius:6px;margin:auto}
+  dialog::backdrop{background:rgba(0,0,0,.8);backdrop-filter:blur(4px)}
+  .media{position:relative;aspect-ratio:16/9;background:#000}
+  .media iframe,.media video{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .media .soon{position:absolute;inset:0;display:grid;place-items:center;color:#888;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+  .close{position:absolute;top:10px;right:10px;z-index:2;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;font-size:20px;line-height:1;display:grid;place-items:center}
+  .info{padding:22px 26px 28px}
+  .info h2{font-size:18px;font-weight:600}
+  .info dl{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;margin-top:14px;font-size:14px}
+  .info dt{color:var(--muted)}
+  .info dd{margin:0}
+  .info p{margin-top:14px;color:var(--muted);max-width:46em}
+
+  footer{border-top:1px solid var(--line)}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:22px;padding-bottom:26px;font-size:12.5px;color:var(--muted)}
+  footer a:hover{color:var(--fg)}
+
+  @media (max-width:760px){
+    header .wrap{grid-template-columns:1fr auto;grid-template-areas:"brand brand" "nav tools";height:auto;padding-top:20px;padding-bottom:8px;row-gap:8px}
+    .brand{grid-area:brand}.nav{grid-area:nav;gap:20px}.tools{grid-area:tools}
+    .featured{grid-template-columns:1fr}
+    .tabs{margin-top:44px}
+    .v-row{grid-template-columns:1fr}
+    .info{padding:18px 18px 24px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav class="nav" aria-label="Principal">
+      <a href="#trilha" data-nav="portfolio">Portfolio</a>
+      <a href="#voice-over" data-nav="voice-over">Voice Over</a>
+    </nav>
+    <a class="brand" id="brand" href="#trilha"></a>
+    <div class="tools" id="tools"></div>
+  </div>
+</header>
+
+<main><div class="wrap" id="app"></div></main>
+
+<footer><div class="wrap" id="footer"></div></footer>
+
+<dialog id="player" aria-label="Player">
+  <button class="close" type="button" aria-label="Fechar" id="close">×</button>
+  <div id="player-body"></div>
+</dialog>
+
+<!-- CONTADOR DE VISITAS: cole aqui o código do Cloudflare Web Analytics ou do Umami -->
+
+<script src="content.js"></script>
+<script>
+(function () {
+  'use strict';
+  var S = window.SITE || {};
+  var app = document.getElementById('app');
+  var dlg = document.getElementById('player');
+  var canHover = window.matchMedia && window.matchMedia('(hover:hover)').matches;
+
+  /* ---------- utilidades ---------- */
+  function h(tag, attrs) {
+    var el = document.createElement(tag);
+    attrs = attrs || {};
+    Object.keys(attrs).forEach(function (k) {
+      var v = attrs[k];
+      if (v == null || v === false) return;
+      if (k === 'class') el.className = v;
+      else if (k === 'text') el.textContent = v;
+      else if (k.slice(0, 2) === 'on') el.addEventListener(k.slice(2), v);
+      else el.setAttribute(k, v);
+    });
+    for (var i = 2; i < arguments.length; i++) {
+      var c = arguments[i];
+      if (c == null || c === false) continue;
+      el.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+    }
+    return el;
+  }
+  function svg(inner, vb) {
+    var d = document.createElement('div');
+    d.innerHTML = '<svg viewBox="' + (vb || '0 0 24 24') + '" aria-hidden="true">' + inner + '</svg>';
+    return d.firstChild;
+  }
+  function hue(s) { var n = 0; s = String(s || ''); for (var i = 0; i < s.length; i++) n = (n * 31 + s.charCodeAt(i)) % 360; return n; }
+  function ytId(u) { var m = String(u || '').match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/); return m ? m[1] : null; }
+
+  function embed(u) {
+    u = String(u || '').trim();
+    if (!u) return null;
+    var y = ytId(u);
+    if (y) return { type: 'iframe', src: 'https://www.youtube-nocookie.com/embed/' + y + '?autoplay=1&rel=0' };
+    var v = u.match(/vimeo\.com\/(?:video\/)?(\d+)(?:\/([a-z0-9]+))?/i);
+    if (v) return { type: 'iframe', src: 'https://player.vimeo.com/video/' + v[1] + '?autoplay=1' + (v[2] ? '&h=' + v[2] : '') };
+    if (/\.(mp4|webm|mov)(\?|$)/i.test(u)) return { type: 'video', src: u };
+    return null;
+  }
+
+  function thumbSources(w) {
+    if (w.thumb) return [w.thumb];
+    var y = ytId(w.video);
+    return y ? ['https://i.ytimg.com/vi/' + y + '/maxresdefault.jpg', 'https://i.ytimg.com/vi/' + y + '/hqdefault.jpg'] : [];
+  }
+
+  /* ---------- miniatura ---------- */
+  function thumb(w) {
+    var box = h('div', { class: 'thumb', style: '--h:' + hue(w.id || w.title) });
+    box.appendChild(h('span', { class: 'ph-label', text: w.brand || '' }));
+    var srcs = thumbSources(w);
+    if (srcs.length) {
+      var i = 0;
+      var img = h('img', { alt: '', loading: 'lazy', decoding: 'async' });
+      img.onerror = function () { i++; if (i < srcs.length) img.src = srcs[i]; else img.remove(); };
+      img.onload = function () { if (img.naturalWidth && img.naturalWidth < 200) img.onerror(); };
+      img.src = srcs[0];
+      box.appendChild(img);
+    }
+    if (w.preview && canHover) {
+      var pv = h('video', { muted: '', loop: '', playsinline: '', preload: 'none', 'aria-hidden': 'true' });
+      pv.muted = true;
+      box.appendChild(pv);
+      box._pv = pv;
+    }
+    box.appendChild(h('span', { class: 'play' }, h('i', {}, svg('<path d="M6 4l14 8-14 8z"/>'))));
+    return box;
+  }
+
+  function card(w) {
+    var t = thumb(w);
+    var el = h('button', { class: 'card', type: 'button', 'aria-label': 'Abrir ' + (w.brand || '') + ' ' + (w.title || ''), onclick: function () { openWork(w); } },
+      t,
+      h('span', { class: 'cap' },
+        h('strong', { text: w.brand || '' }),
+        h('span', { text: w.title || '' }),
+        w.role ? h('em', { text: w.role }) : null));
+    if (t._pv) {
+      el.addEventListener('mouseenter', function () { if (!t._pv.src) t._pv.src = w.preview; t._pv.play().catch(function () {}); });
+      el.addEventListener('mouseleave', function () { t._pv.pause(); t._pv.currentTime = 0; });
+    }
+    return el;
+  }
+
+  /* ---------- player ---------- */
+  function row(dl, k, v) { if (v) { dl.appendChild(h('dt', { text: k })); dl.appendChild(h('dd', { text: v })); } }
+
+  function openWork(w) {
+    var body = document.getElementById('player-body');
+    body.replaceChildren();
+    var media = h('div', { class: 'media' });
+    var e = embed(w.video);
+    if (e && e.type === 'iframe') {
+      media.appendChild(h('iframe', { src: e.src, title: (w.brand || '') + ' — ' + (w.title || ''), allow: 'autoplay; fullscreen; picture-in-picture', referrerpolicy: 'strict-origin-when-cross-origin' }));
+    } else if (e && e.type === 'video') {
+      media.appendChild(h('video', { src: e.src, controls: '', autoplay: '', playsinline: '' }));
+    } else {
+      media.appendChild(h('div', { class: 'soon', text: 'Vídeo em breve' }));
+    }
+    var dl = h('dl');
+    row(dl, 'Ano', w.year); row(dl, 'Meu papel', w.role); row(dl, 'Formato', w.format);
+    body.appendChild(media);
+    body.appendChild(h('div', { class: 'info' },
+      h('h2', { text: [w.brand, w.title].filter(Boolean).join(' — ') }),
+      dl,
+      w.note ? h('p', { text: w.note }) : null));
+    if (!dlg.open) dlg.showModal();
+  }
+  document.getElementById('close').addEventListener('click', function () { dlg.close(); });
+  dlg.addEventListener('click', function (ev) { if (ev.target === dlg) dlg.close(); });
+  dlg.addEventListener('close', function () { document.getElementById('player-body').replaceChildren(); });
+
+  /* ---------- páginas ---------- */
+  var TABS = [{ key: 'trilha', label: 'Trilha' }, { key: 'sound-design', label: 'Sound Design' }];
+
+  function renderPortfolio(tab) {
+    app.replaceChildren();
+    var works = S.works || [];
+    var byId = {}; works.forEach(function (w) { byId[w.id] = w; });
+
+    var feat = (S.featured || []).map(function (id) { return byId[id]; }).filter(Boolean).slice(0, 2);
+    if (feat.length) {
+      app.appendChild(h('p', { class: 'label', text: 'Em destaque' }));
+      var fg = h('div', { class: 'featured' });
+      feat.forEach(function (w) { fg.appendChild(card(w)); });
+      app.appendChild(fg);
+    }
+
+    var tabs = h('div', { class: 'tabs', role: 'tablist' });
+    TABS.forEach(function (t) {
+      tabs.appendChild(h('a', { href: '#' + t.key, text: t.label, 'aria-current': t.key === tab ? 'page' : null }));
+    });
+    app.appendChild(tabs);
+
+    var featIds = feat.map(function (w) { return w.id; });
+    var list = works.filter(function (w) {
+      return w.category === tab && !(S.hideFeaturedInGrid && featIds.indexOf(w.id) > -1);
+    });
+    if (!list.length) { app.appendChild(h('p', { class: 'empty', text: 'Em breve.' })); return; }
+    var grid = h('div', { class: 'grid' });
+    list.forEach(function (w) { grid.appendChild(card(w)); });
+    app.appendChild(grid);
+  }
+
+  function renderVoice() {
+    app.replaceChildren();
+    var wrap = h('section', { class: 'voice' }, h('h1', { text: 'Voice Over' }));
+    if (S.voiceIntro) wrap.appendChild(h('p', { class: 'intro', text: S.voiceIntro }));
+    var groups = {}, order = [];
+    (S.voice || []).forEach(function (d) {
+      var c = d.category || 'Demos';
+      if (!groups[c]) { groups[c] = []; order.push(c); }
+      groups[c].push(d);
+    });
+    order.forEach(function (c) {
+      var g = h('div', { class: 'v-group' }, h('p', { class: 'label', text: c }));
+      groups[c].forEach(function (d) {
+        g.appendChild(h('div', { class: 'v-row' },
+          h('span', { text: d.title || '' }),
+          d.file ? h('audio', { controls: '', preload: 'none', src: d.file }) : h('span', { class: 'soon', text: 'Áudio em breve' })));
+      });
+      wrap.appendChild(g);
+    });
+    app.appendChild(wrap);
+  }
+
+  /* ---------- cabeçalho / rodapé ---------- */
+  function buildChrome() {
+    document.title = (S.name || '') + ' — ' + (S.tagline || '').replace(/ · /g, ', ');
+    if (!S.showVoiceOver) {
+      var vo = document.querySelector('[data-nav="voice-over"]');
+      if (vo) vo.remove();
+    }
+    var brand = document.getElementById('brand');
+    brand.textContent = S.name || '';
+
+    var tools = document.getElementById('tools');
+    if (S.instagram) tools.appendChild(h('a', { class: 'icon-btn', href: S.instagram, target: '_blank', rel: 'noopener', 'aria-label': 'Instagram', title: 'Instagram' },
+      svg('<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/>')));
+    if (S.email) tools.appendChild(h('a', { class: 'icon-btn', href: 'mailto:' + S.email, 'aria-label': 'E-mail', title: S.email },
+      svg('<rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7.5l8 6 8-6"/>')));
+    var tg = h('button', { class: 'icon-btn', type: 'button', 'aria-label': 'Alternar tema claro/escuro', title: 'Tema' },
+      svg('<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/>'));
+    tg.addEventListener('click', function () {
+      var r = document.documentElement;
+      var next = r.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      r.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+    tools.appendChild(tg);
+
+    var f = document.getElementById('footer');
+    f.appendChild(h('span', { text: '© ' + new Date().getFullYear() + ' ' + (S.name || '') + (S.tagline ? ' · ' + S.tagline : '') }));
+    if (S.email) f.appendChild(h('a', { href: 'mailto:' + S.email, text: S.email }));
+  }
+
+  /* ---------- rotas (#trilha, #sound-design, #voice-over) ---------- */
+  var lastPage = null;
+  function route() {
+    var r = (location.hash || '').replace(/^#\/?/, '');
+    var page = (r === 'voice-over' && S.showVoiceOver) ? 'voice-over' : 'portfolio';
+    if (page === 'voice-over') renderVoice();
+    else renderPortfolio(r === 'sound-design' ? 'sound-design' : 'trilha');
+    Array.prototype.forEach.call(document.querySelectorAll('[data-nav]'), function (a) {
+      if (a.getAttribute('data-nav') === page) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+    if (lastPage !== null && lastPage !== page) window.scrollTo(0, 0);
+    lastPage = page;
+  }
+  window.addEventListener('hashchange', route);
+
+  buildChrome();
+  route();
+})();
+</script>
+</body>
+</html>
