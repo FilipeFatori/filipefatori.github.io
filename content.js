@@ -60,32 +60,6 @@ window.SITE = {
       preview: ""
     },
     {
-      id: "kayak-voce-sonha",
-      category: "trilha",
-      brand: "Kayak",
-      title: "Você sonha, o KAYAK te leva",
-      year: "2022",
-      role: "Trilha Sonora: Filipe Fatori",
-      format: "",
-      note: "",
-      video: "https://vimeo.com/1246463885",
-      thumb: "",
-      preview: ""
-    },
-    {
-      id: "oster-crie-receitas",
-      category: "trilha",
-      brand: "Oster",
-      title: "Crie receitas que ficam",
-      year: "2026",
-      role: "Trilha Sonora: Filipe Fatori",
-      format: "",
-      note: "",
-      video: "https://vimeo.com/1246049931",
-      thumb: "",
-      preview: ""
-    },
-    {
       id: "bauducco-stickers",
       category: "trilha",
       brand: "Bauducco",
@@ -95,6 +69,19 @@ window.SITE = {
       format: "",
       note: "",
       video: "https://vimeo.com/1246466136",
+      thumb: "",
+      preview: ""
+    },
+    {
+      id: "kuat-meu-pais-barraquinha",
+      category: "trilha",
+      brand: "Kuat",
+      title: "Meu País Barraquinha",
+      year: "2022",
+      role: "Trilha Sonora: Filipe Fatori",
+      format: "",
+      note: "",
+      video: "https://vimeo.com/1246056058",
       thumb: "",
       preview: ""
     },
@@ -112,15 +99,28 @@ window.SITE = {
       preview: ""
     },
     {
-      id: "kuat-meu-pais-barraquinha",
+      id: "oster-crie-receitas",
       category: "trilha",
-      brand: "Kuat",
-      title: "Meu País Barraquinha",
+      brand: "Oster",
+      title: "Crie receitas que ficam",
+      year: "2026",
+      role: "Trilha Sonora: Filipe Fatori",
+      format: "",
+      note: "",
+      video: "https://vimeo.com/1246049931",
+      thumb: "",
+      preview: ""
+    },
+    {
+      id: "kayak-voce-sonha",
+      category: "trilha",
+      brand: "Kayak",
+      title: "Você sonha, o KAYAK te leva",
       year: "2022",
       role: "Trilha Sonora: Filipe Fatori",
       format: "",
       note: "",
-      video: "https://vimeo.com/1246056058",
+      video: "https://vimeo.com/1246463885",
       thumb: "",
       preview: ""
     },
