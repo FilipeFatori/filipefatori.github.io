@@ -60,15 +60,17 @@ window.SITE = {
       preview: ""
     },
     {
-      id: "marca-02",
+      id: "kayak-voce-sonha",
       category: "trilha",
-      brand: "Marca 02",
-      title: "Título da campanha",
-      year: "2025",
-      role: "Composição e produção",
-      format: "Filme 60\"",
+      brand: "Kayak",
+      title: "Você sonha, o KAYAK te leva",
+      year: "2022",
+      role: "Trilha Sonora: Filipe Fatori",
+      format: "",
       note: "",
-      video: "", thumb: "", preview: ""
+      video: "https://vimeo.com/1246463885",
+      thumb: "",
+      preview: ""
     },
     {
       id: "marca-03",
