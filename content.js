@@ -125,15 +125,17 @@ window.SITE = {
       preview: ""
     },
     {
-      id: "marca-04",
+      id: "serasa-burger-king-quem-tem-medo-do-score",
       category: "sound-design",
-      brand: "Marca 04",
-      title: "Título da campanha",
-      year: "2025",
-      role: "Sound design e mix",
-      format: "Filme 30\"",
-      note: "Uma linha sobre o que o som fez ali.",
-      video: "", thumb: "", preview: ""
+      brand: "Serasa x Burger King",
+      title: "Quem tem medo do score?",
+      year: "2026",
+      role: "Sound Design: Filipe Fatori",
+      format: "",
+      note: "",
+      video: "https://vimeo.com/1246051795",
+      thumb: "",
+      preview: ""
     },
     {
       id: "marca-05",
