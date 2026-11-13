@@ -73,15 +73,56 @@ window.SITE = {
       preview: ""
     },
     {
-      id: "marca-03",
+      id: "oster-crie-receitas",
       category: "trilha",
-      brand: "Marca 03",
-      title: "Título da campanha",
-      year: "2024",
-      role: "Trilha original",
-      format: "Spot 30\"",
+      brand: "Oster",
+      title: "Crie receitas que ficam",
+      year: "2026",
+      role: "Trilha Sonora: Filipe Fatori",
+      format: "",
       note: "",
-      video: "", thumb: "", preview: ""
+      video: "https://vimeo.com/1246049931",
+      thumb: "",
+      preview: ""
+    },
+    {
+      id: "bauducco-stickers",
+      category: "trilha",
+      brand: "Bauducco",
+      title: "Stickers",
+      year: "2024",
+      role: "Trilha Sonora: Filipe Fatori",
+      format: "",
+      note: "",
+      video: "https://vimeo.com/1246466136",
+      thumb: "",
+      preview: ""
+    },
+    {
+      id: "infinitepay-ludwig-von-strauss",
+      category: "trilha",
+      brand: "InfinitePay",
+      title: "Ludwig Von Strauss",
+      year: "2022",
+      role: "Trilha Sonora: Filipe Fatori",
+      format: "",
+      note: "",
+      video: "https://vimeo.com/1246049409",
+      thumb: "",
+      preview: ""
+    },
+    {
+      id: "kuat-meu-pais-barraquinha",
+      category: "trilha",
+      brand: "Kuat",
+      title: "Meu País Barraquinha",
+      year: "2022",
+      role: "Trilha Sonora: Filipe Fatori",
+      format: "",
+      note: "",
+      video: "https://vimeo.com/1246056058",
+      thumb: "",
+      preview: ""
     },
     {
       id: "marca-04",
