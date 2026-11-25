@@ -53,7 +53,6 @@ window.SITE = {
                  ex.: "img/visa-preview.mp4"
      --------------------------------------------------------------- */
   works: [
-
     {
       id: "motorola-swarovski-moto-buds-loop",
       category: "trilha",
@@ -87,10 +86,10 @@ window.SITE = {
       preview: ""
     },
     {
-      id: "kuat-meu-pais-barraquinha",
+      id: "kayak-voce-sonha",
       category: "trilha",
-      brand: "Kuat",
-      title: "Meu País Barraquinha",
+      brand: "Kayak",
+      title: "Você sonha, o KAYAK te leva",
       year: "2022",
       role: "Produção Musical: Filipe Fatori",
       audioProd: "",
@@ -98,7 +97,23 @@ window.SITE = {
       videoProd: "",
       format: "",
       note: "",
-      video: "https://vimeo.com/1246056058",
+      video: "https://vimeo.com/1246463885",
+      thumb: "",
+      preview: ""
+    },
+    {
+      id: "serasa-experian-papai-noel-quem-e-quem",
+      category: "trilha",
+      brand: "Serasa Experian",
+      title: "Será que o Papai Noel sabe quem é quem?",
+      year: "2025",
+      role: "Produção Musical: Filipe Fatori",
+      audioProd: "",
+      agency: "",
+      videoProd: "",
+      format: "",
+      note: "",
+      video: "https://vimeo.com/1249860406",
       thumb: "",
       preview: ""
     },
@@ -135,10 +150,10 @@ window.SITE = {
       preview: ""
     },
     {
-      id: "kayak-voce-sonha",
+      id: "kuat-meu-pais-barraquinha",
       category: "trilha",
-      brand: "Kayak",
-      title: "Você sonha, o KAYAK te leva",
+      brand: "Kuat",
+      title: "Meu País Barraquinha",
       year: "2022",
       role: "Produção Musical: Filipe Fatori",
       audioProd: "",
@@ -146,39 +161,7 @@ window.SITE = {
       videoProd: "",
       format: "",
       note: "",
-      video: "https://vimeo.com/1246463885",
-      thumb: "",
-      preview: ""
-    },
-    {
-      id: "cortag-brasileiro-eu-sou",
-      category: "trilha",
-      brand: "Cortag",
-      title: "Brasileiro eu sou, com Cortag eu vou",
-      year: "2026",
-      role: "Composição e Produção Musical: Filipe Fatori",
-      audioProd: "",
-      agency: "",
-      videoProd: "",
-      format: "",
-      note: "",
-      video: "https://vimeo.com/1246049841",
-      thumb: "",
-      preview: ""
-    },
-    {
-      id: "serasa-experian-papai-noel-quem-e-quem",
-      category: "trilha",
-      brand: "Serasa Experian",
-      title: "Será que o Papai Noel sabe quem é quem?",
-      year: "2025",
-      role: "Produção Musical: Filipe Fatori",
-      audioProd: "",
-      agency: "",
-      videoProd: "",
-      format: "",
-      note: "",
-      video: "https://vimeo.com/1249860406",
+      video: "https://vimeo.com/1246056058",
       thumb: "",
       preview: ""
     },
@@ -195,6 +178,22 @@ window.SITE = {
       format: "",
       note: "",
       video: "https://vimeo.com/1249859267",
+      thumb: "",
+      preview: ""
+    },
+    {
+      id: "cortag-brasileiro-eu-sou",
+      category: "trilha",
+      brand: "Cortag",
+      title: "Brasileiro eu sou, com Cortag eu vou",
+      year: "2026",
+      role: "Composição e Produção Musical: Filipe Fatori",
+      audioProd: "",
+      agency: "",
+      videoProd: "",
+      format: "",
+      note: "",
+      video: "https://vimeo.com/1246049841",
       thumb: "",
       preview: ""
     },
