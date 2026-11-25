@@ -18,6 +18,10 @@ window.SITE = {
   instagram: "https://instagram.com/filipefatori",   // TODO: troque pelo seu
   email: "",                           // TODO: troque pelo seu
 
+  // Ficha técnica: mostra a linha "Produtora de áudio" no player de todos os trabalhos.
+  // Para esconder em todos de uma vez, troque true por false.
+  showAudioProd: true,
+
   // DESTAQUES (opcional): até 2 trabalhos grandes no topo da página inicial.
   // Está DESLIGADO (lista vazia). Para ligar, coloque os "id" de 2 trabalhos,
   // por exemplo: featured: ["marca-01", "marca-04"],
@@ -36,6 +40,9 @@ window.SITE = {
        title     nome da campanha ou do filme
        year      ano
        role      o SEU papel (ex.: "Composição e produção")
+       audioProd produtora de áudio (aparece na ficha técnica do player)
+       agency    agência do trabalho (deixe "" se não souber)
+       videoProd produtora de vídeo (deixe "" se não souber)
        format    formato (ex.: "Filme 30\"", "Spot de rádio", "Social")
        note      uma linha sobre a decisão criativa (aparece no player)
        video     link do YouTube ou Vimeo, ou arquivo "videos/algo.mp4"
@@ -53,6 +60,9 @@ window.SITE = {
       title: "Moto Buds Loop",
       year: "2025",
       role: "Trilha Sonora: Filipe Fatori",
+      audioProd: "Berimbau Estúdio",
+      agency: "",
+      videoProd: "Craft.",
       format: "",
       note: "",
       video: "https://vimeo.com/1246056190",   // link do YouTube ou Vimeo
@@ -66,6 +76,9 @@ window.SITE = {
       title: "Stickers",
       year: "2024",
       role: "Trilha Sonora: Filipe Fatori",
+      audioProd: "Berimbau Estúdio",
+      agency: "AMPFY",
+      videoProd: "",
       format: "",
       note: "",
       video: "https://vimeo.com/1246466136",
@@ -79,6 +92,9 @@ window.SITE = {
       title: "Meu País Barraquinha",
       year: "2022",
       role: "Trilha Sonora: Filipe Fatori",
+      audioProd: "Blood Audio",
+      agency: "",
+      videoProd: "",
       format: "",
       note: "",
       video: "https://vimeo.com/1246056058",
@@ -92,6 +108,9 @@ window.SITE = {
       title: "Ludwig Von Strauss",
       year: "2022",
       role: "Trilha Sonora: Filipe Fatori",
+      audioProd: "Berimbau Estúdio",
+      agency: "",
+      videoProd: "Landot",
       format: "",
       note: "",
       video: "https://vimeo.com/1246049409",
@@ -105,6 +124,9 @@ window.SITE = {
       title: "Crie receitas que ficam",
       year: "2026",
       role: "Trilha Sonora: Filipe Fatori",
+      audioProd: "Berimbau Estúdio",
+      agency: "",
+      videoProd: "",
       format: "",
       note: "",
       video: "https://vimeo.com/1246049931",
@@ -118,9 +140,60 @@ window.SITE = {
       title: "Você sonha, o KAYAK te leva",
       year: "2022",
       role: "Trilha Sonora: Filipe Fatori",
+      audioProd: "Berimbau Estúdio",
+      agency: "",
+      videoProd: "Areia Filmes",
       format: "",
       note: "",
       video: "https://vimeo.com/1246463885",
+      thumb: "",
+      preview: ""
+    },
+    {
+      id: "cortag-brasileiro-eu-sou",
+      category: "trilha",
+      brand: "Cortag",
+      title: "Brasileiro eu sou, com Cortag eu vou",
+      year: "2026",
+      role: "Composição e Produção Musical: Filipe Fatori",
+      audioProd: "Berimbau Estúdio",
+      agency: "Desafio",
+      videoProd: "",
+      format: "",
+      note: "",
+      video: "https://vimeo.com/1246049841",
+      thumb: "",
+      preview: ""
+    },
+    {
+      id: "serasa-experian-papai-noel-quem-e-quem",
+      category: "trilha",
+      brand: "Serasa Experian",
+      title: "Será que o Papai Noel sabe quem é quem?",
+      year: "2025",
+      role: "Trilha Sonora: Filipe Fatori",
+      audioProd: "Berimbau Estúdio",
+      agency: "",
+      videoProd: "Etcetera Produções",
+      format: "",
+      note: "",
+      video: "https://vimeo.com/1249860406",
+      thumb: "",
+      preview: ""
+    },
+    {
+      id: "serasa-quem-pagou-odete-trilha",
+      category: "trilha",
+      brand: "Serasa",
+      title: "Quem Pagou Odete?",
+      year: "2025",
+      role: "Trilha e Sound Design: Filipe Fatori",
+      audioProd: "Berimbau Estúdio",
+      agency: "",
+      videoProd: "Santa Transmedia",
+      format: "",
+      note: "",
+      video: "https://vimeo.com/1249859267",
       thumb: "",
       preview: ""
     },
@@ -131,6 +204,9 @@ window.SITE = {
       title: "Quem tem medo do score?",
       year: "2026",
       role: "Sound Design: Filipe Fatori",
+      audioProd: "Berimbau Estúdio",
+      agency: "",
+      videoProd: "Balma Films",
       format: "",
       note: "",
       video: "https://vimeo.com/1246051795",
@@ -138,28 +214,37 @@ window.SITE = {
       preview: ""
     },
     {
-      id: "marca-05",
+      id: "serasa-os-caca-boletos",
       category: "sound-design",
-      brand: "Marca 05",
-      title: "Título da campanha",
-      year: "2024",
-      role: "Sound design",
-      format: "Social",
+      brand: "Serasa",
+      title: "Os Caça Boletos",
+      year: "2023",
+      role: "Sound Design: Filipe Fatori",
+      audioProd: "Berimbau Estúdio",
+      agency: "",
+      videoProd: "",
+      format: "",
       note: "",
-      video: "", thumb: "", preview: ""
+      video: "https://vimeo.com/1249859576",
+      thumb: "",
+      preview: ""
     },
     {
-      id: "marca-06",
+      id: "serasa-quem-pagou-odete-sound-design",
       category: "sound-design",
-      brand: "Marca 06",
-      title: "Título da campanha",
-      year: "2024",
-      role: "Sound design",
-      format: "Filme 15\"",
+      brand: "Serasa",
+      title: "Quem Pagou Odete?",
+      year: "2025",
+      role: "Trilha e Sound Design: Filipe Fatori",
+      audioProd: "Berimbau Estúdio",
+      agency: "",
+      videoProd: "Santa Transmedia",
+      format: "",
       note: "",
-      video: "", thumb: "", preview: ""
+      video: "https://vimeo.com/1249859267",
+      thumb: "",
+      preview: ""
     }
-
   ],
 
   /* ---------------------------------------------------------------
