@@ -305,7 +305,12 @@
       media.appendChild(arrowBtn('nav-arrow next', 1));
     }
     var dl = h('dl');
-    row(dl, 'Ano', w.year); row(dl, 'Crédito', w.role); row(dl, 'Formato', w.format);
+    // Ficha técnica: seu crédito primeiro ("Trilha Sonora: Nome" vira rótulo + nome), depois produtora de áudio, agência e produtora de vídeo
+    var rp = String(w.role || ''), ci = rp.indexOf(':');
+    row(dl, ci > 0 ? rp.slice(0, ci).trim() : 'Crédito', ci > 0 ? rp.slice(ci + 1).trim() : rp);
+    if (window.SITE.showAudioProd !== false) row(dl, 'Produtora de áudio', w.audioProd);
+    row(dl, 'Agência', w.agency); row(dl, 'Produtora de vídeo', w.videoProd);
+    row(dl, 'Ano', w.year); row(dl, 'Formato', w.format);
     var head = h('div', { class: 'info-head' },
       h('h2', { text: [w.brand, w.title].filter(Boolean).join(' — ') }),
       n > 1 ? h('div', { class: 'pager' }, arrowBtn('', -1), h('span', { text: (view.i + 1) + ' / ' + n }), arrowBtn('', 1)) : null);
